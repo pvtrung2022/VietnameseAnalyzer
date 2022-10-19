@@ -1,1 +1,1 @@
-Project này được dùng để phân tích cấu trúc câu tiếng Việt một cách tự động
+Dự án này được dùng để phân tích cấu trúc câu tiếng Việt một cách tự động. Dự án GitHub này bao gồm hai dự án IntelliJ IDEA là VietnameseAnalyzer và Utilities trong các thư mục tương ứng. Dự án thứ nhất là dự án chính và tham chiếu đến dự án thứ hai. Trong quá trình thực hiện dự án có sử dụng jlink của Mathematica để tham chiếu nên khi sử dụng bạn cần phải tham chiếu đến thư viện JLink.jar để tránh để báo lỗi. Thực tế thì bạn không cần phải biết cách sử dụng thư viện này.  

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="JMathematicaUtilities">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JMathematicaUtilities/out/artifacts/JMathematicaUtilities_jar/JMathematicaUtilities.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../JMathematicaUtilities/src" />
+    </SOURCES>
+  </library>
+</component>

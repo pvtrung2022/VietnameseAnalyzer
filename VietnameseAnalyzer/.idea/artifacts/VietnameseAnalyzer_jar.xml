@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VietnameseAnalyzer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VietnameseAnalyzer_jar</output-path>
+    <root id="archive" name="VietnameseAnalyzer.jar">
+      <element id="module-output" name="VietnameseAnalyzer" />
+    </root>
+  </artifact>
+</component>

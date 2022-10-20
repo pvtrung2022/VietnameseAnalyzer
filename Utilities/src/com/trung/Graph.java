@@ -1,7 +1,6 @@
 package com.trung;
 
 import com.wolfram.jlink.Expr;
-import com.wolfram.jlink.LoopbackLink;
 import com.wolfram.jlink.MathLinkFactory;
 
 import java.util.*;
@@ -91,6 +90,7 @@ public class Graph<T> implements Cloneable
         try
         {
             var vc = this.vertexCount();
+            var loopbackLink = new LoopbackLink();
             loopbackLink.putFunction("List", vc);
             for (var v : this.vertexList())
                 loopbackLink.put(corres.get(v));
@@ -253,7 +253,7 @@ public class Graph<T> implements Cloneable
                     res.add(runningEle);
                     runningEle = before.get(runningEle);
                 }
-                return (ArrayList<T>) (Object)Utilities.reverse(res);
+                return (ArrayList<T>) (Object) Utilities.reverse(res);
             }
             var outVs = outGoingVertices(topEle);
             for (var v : outVs)
@@ -307,17 +307,17 @@ public class Graph<T> implements Cloneable
         return null;
     }
 
-    private static LoopbackLink loopbackLink;
+//    private static LoopbackLink loopbackLink;
 
     public static boolean initialize()
     {
-        Utilities.executeMathematicaCode("Options[Graph`pageRank]={\"Damping Factor\"->0.85,\"Step Number\"->0,\"Show Progress\"->True}");
-        try
-        {
-            loopbackLink = MathLinkFactory.createLoopbackLink();
-        } catch (Exception e)
-        {
-        }
+//        Utilities.executeMathematicaCode("Options[Graph`pageRank]={\"Damping Factor\"->0.85,\"Step Number\"->0,\"Show Progress\"->True}");
+//        try
+//        {
+//            loopbackLink = MathLinkFactory.createLoopbackLink();
+//        } catch (Exception e)
+//        {
+//        }
         return true;
     }
 

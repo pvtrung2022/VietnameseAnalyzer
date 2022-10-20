@@ -5785,43 +5785,46 @@ public class VietnameseAnalyzer
         typePairDirectionLeastSquares = getTypePairDirectionLeastSquares();
     }
 
-    private static double getTypePairDirectionLeastSquares()
+    public static double getTypePairDirectionLeastSquares()
     {
         if (typePairDirections == null)
             initializetypePairDirections();
-        var mt = new ArrayList<Double>();
-        var vt = new ArrayList<Double>();
+        var data = new ArrayList<ArrayList<Double>>();
+//        var vt = new ArrayList<Double>();
         for (var typePair : typePairDirections.keySet())
         {
             var values = new ArrayList<Double>();
             values.add(typePairDirections.get(typePair).get("next").doubleValue());
             values.add(typePairDirections.get(typePair).get("before").doubleValue());
             Utilities.quickSort(values, (x, y) -> x.doubleValue() - y.doubleValue());
-            mt.add(values.get(0));
-            vt.add(values.get(1));
+            data.add(values);
+//            mt.add(values.get(0));
+//            vt.add(values.get(1));
         }
-        var lb0 = new LoopbackLink();
-        var lb1 = new LoopbackLink();
-        var size = mt.size();
-        lb0.putFunction("List", size);
-        lb1.putFunction("List", size);
-        for (var i = 0; i <= size - 1; i++)
-        {
-            lb0.putFunction("List", 1);
-            lb0.put(mt.get(i));
-            lb1.put(vt.get(i));
-        }
-        var lb2 = new LoopbackLink();
-        lb2.putFunction("LeastSquares", 2);
-        lb2.put(lb0.getExpr());
-        lb2.put(lb1.getExpr());
-        try
-        {
-            return Utilities.evaluateExpr(lb2.getExpr()).part(1).asDouble();
-        } catch (Exception e)
-        {
-            throw new RuntimeException(e.getMessage());
-        }
+        var res = getLeastSquares((ArrayList<ArrayList<? extends Number>>) (Object) data);
+        return res.get(0);
+//        var lb0 = new LoopbackLink();
+//        var lb1 = new LoopbackLink();
+//        var size = mt.size();
+//        lb0.putFunction("List", size);
+//        lb1.putFunction("List", size);
+//        for (var i = 0; i <= size - 1; i++)
+//        {
+//            lb0.putFunction("List", 1);
+//            lb0.put(mt.get(i));
+//            lb1.put(vt.get(i));
+//        }
+//        var lb2 = new LoopbackLink();
+//        lb2.putFunction("LeastSquares", 2);
+//        lb2.put(lb0.getExpr());
+//        lb2.put(lb1.getExpr());
+//        try
+//        {
+//            return Utilities.evaluateExpr(lb2.getExpr()).part(1).asDouble();
+//        } catch (Exception e)
+//        {
+//            throw new RuntimeException(e.getMessage());
+//        }
     }
 
     /**

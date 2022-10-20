@@ -481,11 +481,10 @@ public class Utilities
     }
 
     /**
-     *
      * @param col
      * @param func
-     * @return kiểm tra một collection có được sắp xếp với hàm giá trị func
      * @param <T>
+     * @return kiểm tra một collection có được sắp xếp với hàm giá trị func
      */
     public static <T> boolean isOrdered(List<T> col, UnaryFunction<T, ? extends Number> func)
     {
@@ -493,11 +492,10 @@ public class Utilities
     }
 
     /**
-     *
      * @param array
      * @param func
-     * @return kiểm tra một mảng có được sắp xếp với hàm giá trị func
      * @param <T>
+     * @return kiểm tra một mảng có được sắp xếp với hàm giá trị func
      */
     public static <T> boolean isOrdered(T[] array, UnaryFunction<T, ? extends Number> func)
     {
@@ -505,11 +503,10 @@ public class Utilities
     }
 
     /**
-     *
      * @param array
      * @param comparator
-     * @return kiểm tra một mảng có được sắp xếp với hàm so sánh comparator
      * @param <T>
+     * @return kiểm tra một mảng có được sắp xếp với hàm so sánh comparator
      */
     public static <T> boolean isOrdered(T[] array, BinaryFunction<T, T, ? extends Number> comparator)
     {
@@ -524,11 +521,10 @@ public class Utilities
     }
 
     /**
-     *
      * @param col
      * @param comparator
-     * @return kiểm tra một collection có được sắp xếp với hàm so sánh comparator
      * @param <T>
+     * @return kiểm tra một collection có được sắp xếp với hàm so sánh comparator
      */
     public static <T> boolean isOrdered(List<T> col, BinaryFunction<T, T, ? extends Number> comparator)
     {
@@ -2204,18 +2200,18 @@ public class Utilities
         digitStrings = new HashSet<Character>();
         for (var i = 0; i <= 9; i++)
             digitStrings.add(Integer.toString(i).charAt(0));
-        try
-        {
-            loopbackLink = MathLinkFactory.createLoopbackLink();
-        } catch (Exception e)
-        {
-        }
+//        try
+//        {
+//            loopbackLink = MathLinkFactory.createLoopbackLink();
+//        } catch (Exception e)
+//        {
+//        }
         return true;
     }
 
     private static boolean isInitialized = initialize();
 
-    public static LoopbackLink loopbackLink;
+//    public static LoopbackLink loopbackLink;
 
     private static boolean MListenerInitialized = false;
     private static MathActionListener mathActionListener;
@@ -2280,6 +2276,7 @@ public class Utilities
      */
     public static Expr evaluateExpr(Expr expr)
     {
+//        System.out.println("evaluateExpr is used");
         try
         {
             if (kernelLink == null)
@@ -2309,6 +2306,7 @@ public class Utilities
      */
     public static Object executeMathematicaCode(String code, Object... jeles)
     {
+//        System.out.println("execute mathematica code is used here");
         var wcode = code;
         var locs = getArguments(wcode);
         var intLocs = Utilities.makeHashSet(Utilities.map((ArrayList<Object> x) ->

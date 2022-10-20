@@ -1,0 +1,20 @@
+xem xét vertexToEdgeRank cẩn thận
+xem xét câu "bạn đã sống sót qua những ngày mùa đông khắc nghiệt nhất" để xem xét lại định nghĩa
+ của inNoundCompound
+ xem xét lại insideOutside và những cái AuxiliayryWords
+ "cau
+       "ai có thể thay đổi mọi thứ theo cách đáng sợ" // AnalyzeSentence" có vấn đề khi sử dụng adjustLeaves
+ "Cô ấy có thể không biết chăm sóc người khác"
+ nhớ bỏ cái System.out.println trong cái isSensibleedge mở rộng
+
+thử xem xét ý tưởng về một cạnh là hợp lệ nếu bỏ một vài lỗi nhỏ trong {{1, 1, 1} -> 93583, {1, 1, 0} -> 58054, {0, 1, 1} ->
+                                                                         2135, {1, 0, 0} -> 2000, {0, 1, 0} -> 1444, {1, 0, 1} ->
+                                               e                        756, {0, 0, 0} -> 60, {0, 0, 1} -> 17}
+mà cụ thể ở đây là với sai {1,1,1} va {1,1,0} là hợp lệ. Thâm chí là thêm tọa độ của isSensibleEdge(ed)
+
+các cuốn sách viết về hành trình của những học sinh nỗ lực để tìm kiếm tri thức hiện đại
+
+xem xét cái giá trị undefined của cái isInCommingType
+thực hiện ý tưởng về hai kiểu giống nhau cho isAttaching
+
+xem xét việc xóa bở MeaningEdges trong countErrors

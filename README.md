@@ -4,10 +4,10 @@ Dự án GitHub này bao gồm hai dự án IntelliJ IDEA là VietnameseAnalyzer
 
 Để chạy chương trình đầu tiên bạn sẽ gọi VietnameseAnalyzer.initialize() để chương trình tải những thông tin cần thiết vào các biến tĩnh. Quá trình này thường mất khoảng dưới 2 phút. Sau đó gọi Vietnamese.decideParser(sentence) với sentence là câu bất kỳ bạn nhập vào sẽ cho ra cấu trúc ngữ pháp phụ thuộc của câu (Dependency grammar) dưới dạng một đối tượng đồ thị (Graph) được thiết lập trong dự án Utilities. Vì hàm tĩnh VietnameseAnalyzer.initialize() tải các thông tin cần thiết vào các biến tĩnh nên bạn chỉ cần gọi một lần trong suốt quá trình hoạt động của Java. 
 
-Trong quá trình phân tích một câu nhập vào chương trình sẽ tự động tách câu để chọn từ và chọn kiểu ngữ pháp cho từ. Ví dụ như chương trình sẽ tự động chọn kiểu ngứ pháp cho từ là danh từ ("N"), động từ (""V) hoặc tính từ ("A"), etc. Trong trường hợp bạn không hài lòng với quá trình chọn tự động ấy bạn có thể nhập câu theo mảng để tự mình chọn từ và kiểu ngữ pháp của từ. 
+Trong quá trình phân tích một câu nhập vào chương trình sẽ tự động tách câu để chọn từ và chọn kiểu từ loại cho từ. Ví dụ như chương trình sẽ tự động chọn kiểu từ loại cho từ là danh từ ("N"), động từ (""V) hoặc tính từ ("A"), etc. Trong trường hợp bạn không hài lòng với quá trình chọn tự động ấy bạn có thể nhập câu theo mảng để tự mình chọn từ và kiểu từ loại của từ. 
 
-Vì kho dữ liệu huấn luyện không quá lớn nên có nhiều từ Tiếng Việt không có trong dữ liệu huấn luyện. Để kiểm tra một từ có trong kho huấn luyện và các kiểu ngữ pháp của từ cũng như số lần xuất hiện trong kho huấn luyện, bạn có thể dùng biến tĩnh VietnameseAnalyzer.WordAppearances để kiểm tra.
+Vì kho dữ liệu huấn luyện không quá lớn nên có nhiều từ Tiếng Việt không có trong dữ liệu huấn luyện. Để kiểm tra một từ có trong kho huấn luyện và các kiểu ngữ pháp của từ cũng như số lần xuất hiện trong kho huấn luyện, bạn có thể dùng biến tĩnh VietnameseAnalyzer.WordAppearances để kiểm tra. Biến này là một HashMap nên có thể gọi VietnameseAnalyzer.WordAppearances.keySet() để cho ra tập tất cả các từ có trong kho dữ liệu huấn luyện. Trong trường hợp bạn muốn dùng một từ không có trong kho dữ liệu thì có thể thay thế nó bằng một từ tương tự có trong kho dữ liệu. 
 
-Để minh họa cụ thể hơn cho hướng dẫn bạn vui lòng chạy chương trình trong file Test.java trong dự án VietnameseAnalyzer của IntelliJ IDEA
+Để minh họa cụ thể hơn cho hướng dẫn bạn vui lòng chạy chương trình trong file Test.java trong dự án VietnameseAnalyzer của IntelliJ IDEA.
 
 Dự án này được thực hiện trên IntelliJ IDEA 2022.2.3 và Java 11.0.15

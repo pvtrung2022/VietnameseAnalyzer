@@ -1,1 +1,1 @@
-Lớp này được thiết lập theo định nghĩa chuẩn của đồ thị có hướng trong lý thuyết đồ thị. Để lấy các đỉnh và các cạnh bạn có thể gọi phương thức vertexList() và edgeList() tương ứng.
+Lớp này được thiết lập theo định nghĩa chuẩn của đồ thị có hướng trong lý thuyết đồ thị. Để lấy các đỉnh và các cạnh của một đối tượng đồ thị, bạn có thể gọi phương thức vertexList() và edgeList() tương ứng.

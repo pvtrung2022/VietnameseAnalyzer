@@ -1,1 +1,1 @@
-Lớp này là mở rộng của lớp Graph<WordVertex>, tức là mỗi đỉnh của đồ thị là một đối tượng thuộc lớp WordVertex. Ý tưởng của định nghĩa lớp này là nếu đỉnh w0 được nối đến đỉnh w1 trong đồ thị thuộc lớp Parser thì từ tương ứng w0.Word bổ sung nghĩa cho w1.Word. 
+Lớp này là mở rộng của lớp Graph &lt; WordVertex>, tức là mỗi đỉnh của đồ thị là một đối tượng thuộc lớp WordVertex. Ý tưởng của định nghĩa lớp này là nếu đỉnh w0 được nối đến đỉnh w1 trong đồ thị thuộc lớp Parser thì từ tương ứng w0.Word bổ sung nghĩa cho w1.Word. 

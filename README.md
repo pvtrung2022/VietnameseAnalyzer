@@ -11,3 +11,5 @@ Vì kho dữ liệu huấn luyện không quá lớn nên có nhiều từ Tiế
 Để minh họa cụ thể hơn cho hướng dẫn bạn vui lòng chạy chương trình trong file Test.java trong dự án VietnameseAnalyzer của IntelliJ IDEA.
 
 Dự án này được thực hiện trên IntelliJ IDEA 2022.2.3 và Java 11.0.15
+
+Kho dữ liệu huấn luyện được trích xuất từ https://github.com/datquocnguyen/VnDT

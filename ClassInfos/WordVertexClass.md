@@ -1,1 +1,1 @@
-Lớp WordVertex được định nghĩa trong dự án VietnameseAnalyzer là do sự cần thiết phải chỉ rõ vị trí của từ trong một câu cùng với kiểu từ loại của từ. Do đó nó có 3 trường là Location, Word và Type.
+Lớp WordVertex được định nghĩa trong dự án VietnameseAnalyzer là do sự cần thiết phải chỉ rõ vị trí của từ trong một câu cùng với kiểu từ loại của từ. Do đó nó có 3 trường là Location, Word và Type. Trường Location thường dùng để chỉ vị trí của từ trong câu. Trường Word để chỉ từ được gói. Trường Type để chỉ kiểu từ loại của từ được gói.

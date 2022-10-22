@@ -39,8 +39,8 @@ public class Test
             var check = VietnameseAnalyzer.WordAppearances.containsKey(word);
             if (check)
             {
-                System.out.println("từ '" + word + "'" + " này có trong dữ liệu huấn luyện");
-                System.out.println("các kiểu ngữ pháp của từ này là: " +
+                System.out.println("từ '" + word + "'" + " có trong dữ liệu huấn luyện");
+                System.out.println("các kiểu từ loại của từ này là: " +
                         VietnameseAnalyzer.WordAppearances.get(word).keySet()
                 );
                 System.out.println("số lần xuất hiện của từ này trong dữ liệu huấn luyện: " +

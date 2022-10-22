@@ -5034,8 +5034,11 @@ public class VietnameseAnalyzer
         return errorTreeCompare(tree0, tree1, false);
     }
 
+//    public static int errorTreeCompareCount = 0;
+
     public static double errorTreeCompare(Graph<WordVertex> tree0, Graph<WordVertex> tree1, boolean ignoreErrors)
     {
+//        errorTreeCompareCount++;
         var isoVs0 = isolatedVertices(tree0);
         var isoVs1 = isolatedVertices(tree1);
         var auxTree0 = tree0.clone();
